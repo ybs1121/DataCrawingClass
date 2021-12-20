@@ -14,7 +14,7 @@ options.add_argument('window-size=1920x1080')
 
 name = input("품종 : ")
 english_name = input("품종(영어): ")
-os.mkdir("C:/Users/YBS/PycharmProjects/opencvexample/data/name_of_dogs/" + english_name)
+os.mkdir("링크" + english_name)
 
 #driver = webdriver.Chrome('chromedriver',options=options)
 driver = webdriver.Chrome(options=options)
@@ -68,7 +68,7 @@ for image in images:
         try:
             #imgae_URL= driver.find_element_by_class_name("._image._listImage").get_attribute("src")
             imgae_URL = driver.find_element_by_xpath("/html/body/div[3]/div[2]/div/div[1]/section/div/div[2]/div/div[1]/div[1]/div[1]/div/div/div[1]/div[1]/img").get_attribute("src")
-            urllib.request.urlretrieve(imgae_URL,"C:/Users/YBS/PycharmProjects/opencvexample/data/name_of_dogs/" +english_name+ "/"+english_name+"."+str(count)+".jpg")
+            urllib.request.urlretrieve(imgae_URL,"경로/" +english_name+ "/"+english_name+"."+str(count)+".jpg")
             count = count + 1
             print(str(count)+".jpg")
         except:
